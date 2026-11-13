@@ -7,7 +7,7 @@ A static website (HTML / CSS / JavaScript, no build step, no server code) with:
 | `index.html` | Club homepage: green utility bar + two-row header over a full-width photo slider, the club (staff photo, stats, values), team photo cards (U11–U18, Minimes), "Plus qu’un club" photo gallery with full-screen viewer, featured products, partner call, social links |
 | `boutique.html` | Official shop (big-club store style): scrolling promo ticker, green shop header, framed promo banner (white + green jerseys), one product row per category with page counter and "Voir tout", live jersey personaliser, photo band, category tiles, full catalogue with filter / search / sort, "Retrait au club" and group-order cards, services and FAQ. Product window with gallery, size guide and live name + number preview. |
 
-The cart is shared on both pages (cart icon in the header). There is **no online payment**: the customer fills in name / phone / pickup or delivery, and the order is sent to the club by **WhatsApp** (0690099637), with **e-mail** (`usaourir@gmail.com`) as a second option. The club then confirms by phone. Payment is made on delivery or on pickup at the club.
+The cart is shared on both pages (cart icon in the header). There is **no online payment**: the customer fills in name / phone / pickup or delivery, and the order is sent to the club by **WhatsApp** (0669112013), with **e-mail** (`usaourir@gmail.com`) as a second option. The club then confirms by phone. Payment is made on delivery or on pickup at the club.
 
 ## Languages
 
@@ -20,7 +20,7 @@ French (default), Arabic (right-to-left) and English: language menu in the heade
 
 Everything is in this one file:
 
-- `settings.whatsapp`: the WhatsApp number orders are sent to, in international format, currently `212690099637` (0690099637). Empty it to receive orders by e-mail only.
+- `settings.whatsapp`: the WhatsApp number orders are sent to, in international format, currently `212669112013` (0669112013). Empty it to receive orders by e-mail only.
 - `settings.deliveryFee` (0 = "to be confirmed") and `settings.printingFee` (name + number printing, default 50 MAD).
 - `stats`, `teams`, `categories` (each with a tile `image`), `products`.
 - `kits`: colours of the home / away / third jerseys, used by the live printing preview. A product with `customizable: true` and `kit: "home"` gets the preview.

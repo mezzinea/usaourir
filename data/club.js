@@ -15,7 +15,7 @@ window.USA_DATA = {
     facebook: "https://web.facebook.com/usaourir",
     // WhatsApp number in international format, digits only, e.g. "2126XXXXXXXX".
     // Leave empty to receive shop orders by e-mail only.
-    whatsapp: "212690099637", // 0690099637
+    whatsapp: "212669112013", // 0669112013
     currency: "MAD",
     // Optional delivery fee (MAD) added when the customer picks home delivery. 0 = "to be confirmed".
     deliveryFee: 0,
