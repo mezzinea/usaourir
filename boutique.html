@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.shopTitle">Boutique officielle — US Aourir</title>
+  <meta name="description" data-i18n-attr="content:meta.shopDesc" content="Maillots, écharpes et accessoires officiels de l’Union Sport Aourir. Chaque achat soutient le club.">
+  <meta name="theme-color" content="#0E773F">
+  <meta property="og:title" content="Boutique officielle — US Aourir">
+  <meta property="og:description" content="Maillots, écharpes et accessoires officiels de l’Union Sport Aourir.">
+  <meta property="og:image" content="img/shop/maillot-full.webp">
+  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700;800&family=Roboto:wght@400;500;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20">
+  <script src="data/club.js?v=20"></script>
+  <script src="js/i18n.js?v=20"></script>
+</head>
+<body data-page="store">
+  <div data-site-header></div>
+
+  <main>
+    <!-- PROMO BANNER -->
+    <section class="promo-banner">
+      <div class="promo-banner__band" aria-hidden="true" data-banner-band></div>
+      <div class="promo-banner__inner">
+        <button type="button" class="promo-banner__frame promo-banner__frame--l" data-product="maillot" aria-label="Maillot blanc 2026/27">
+          <img src="img/shop/maillot-1.webp" alt="" width="900" height="900">
+        </button>
+        <div class="promo-banner__copy">
+          <p class="promo-banner__kicker" data-i18n="banner.kicker">Blanc &amp; vert</p>
+          <h1 class="promo-banner__title" data-i18n="shopHero.title">Maillots<br>2026/27</h1>
+          <p class="promo-banner__text" data-i18n="shopHero.text">Les nouveaux maillots blanc et vert de l’Ittihad Aourir, avec short blanc, vert ou noir. Floqués à votre nom.</p>
+          <a class="btn btn--lg" href="#rail-match" data-i18n="shopHero.cta">Acheter maintenant</a>
+          <img class="promo-banner__crest" src="img/logo-crest.png" alt="" width="64" height="90">
+        </div>
+        <button type="button" class="promo-banner__frame promo-banner__frame--r" data-product="maillot-vert" aria-label="Maillot vert 2026/27">
+          <img src="img/shop/maillot-vert-1.webp" alt="" width="900" height="900">
+        </button>
+      </div>
+    </section>
+
+    <!-- COLLECTION RAILS + PROMO BANDS (filled by js/store.js) -->
+    <section class="shop-rail" id="rail-match" data-rail-cat="match"></section>
+
+    <!-- PRINTING STUDIO -->
+    <section class="studio" id="flocage">
+      <div class="container studio__inner">
+        <div class="studio__preview" data-studio-preview></div>
+        <form class="studio__form" data-studio novalidate>
+          <p class="eyebrow eyebrow--gold" data-i18n="studio.eyebrow">Personnalisez</p>
+          <h2 data-i18n="studio.title">Floquez votre maillot</h2>
+          <p class="studio__text" data-i18n="studio.text"></p>
+          <fieldset class="studio__kits"><legend data-i18n="studio.kit">Tenue</legend><div class="studio__kitlist" data-studio-kits></div></fieldset>
+          <div class="studio__fields">
+            <label class="field"><span data-i18n="store.printName">Nom</span><input name="name" maxlength="12" autocomplete="off" data-i18n-attr="placeholder:studio.namePh" placeholder="VOTRE NOM"></label>
+            <label class="field"><span data-i18n="store.printNumber">Numéro</span><input name="number" inputmode="numeric" maxlength="2" autocomplete="off" placeholder="10"></label>
+          </div>
+          <fieldset class="sizes"><legend><span data-i18n="store.size">Taille</span><button type="button" class="link-btn" data-size-guide="adult" data-i18n="size.guide">Guide des tailles</button></legend><div class="sizes__list" data-studio-sizes></div></fieldset>
+          <div class="studio__total"><span data-i18n="studio.total">Total</span><strong data-studio-total></strong></div>
+          <p class="form-error" data-studio-error hidden></p>
+          <button type="submit" class="btn btn--gold btn--lg btn--block" data-i18n="store.add">Ajouter au panier</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="shop-rail" id="rail-training" data-rail-cat="training"></section>
+
+    <!-- PHOTO BAND: every purchase supports the club -->
+    <section class="photo-band">
+      <img class="photo-band__bg" src="img/photos/ecole-de-foot-lg.webp" srcset="img/photos/ecole-de-foot-md.webp 900w, img/photos/ecole-de-foot-lg.webp 1920w" sizes="100vw" alt="" loading="lazy">
+      <div class="container photo-band__inner">
+        <p class="eyebrow eyebrow--gold" data-i18n="band.eyebrow">100 % club</p>
+        <h2 data-i18n="band.title">Chaque achat soutient nos jeunes</h2>
+        <p data-i18n="band.text"></p>
+        <a class="btn btn--outline-light btn--lg" href="index.html#equipes" data-i18n="band.cta">Découvrir nos équipes</a>
+      </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="section section--tight">
+      <div class="container">
+        <h2 class="shop-title" data-i18n="shop.catsTitle">Acheter par catégorie</h2>
+        <div class="tiles" data-cat-tiles></div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE -->
+    <section class="section" id="catalogue">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="crumb.home">Accueil</a><span aria-hidden="true">›</span><a href="boutique.html" data-i18n="nav.shop">Boutique</a><span aria-hidden="true">›</span><span data-crumb-current></span></nav>
+        <div class="catalog-head">
+          <h2 class="shop-title" data-catalog-title></h2>
+          <p class="catalog-count" data-count></p>
+        </div>
+        <div class="toolbar">
+          <div class="filters" role="toolbar" data-filters></div>
+          <div class="toolbar__right">
+            <label class="search"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="sr-only" data-i18n="catalog.search">Rechercher</span><input type="search" data-search data-i18n-attr="placeholder:catalog.search" placeholder="Rechercher un article"></label>
+            <label class="sort"><span data-i18n="catalog.sort">Trier</span><select data-sort></select></label>
+          </div>
+        </div>
+        <div class="grid" data-grid></div>
+        <p class="catalog-empty" data-empty hidden data-i18n="catalog.empty"></p>
+      </div>
+    </section>
+
+    <!-- INFO CARDS (grey band) -->
+    <section class="info-band">
+      <div class="container info-band__inner">
+        <div class="info-card">
+          <h2 class="shop-title shop-title--center" data-i18n="info.pickupTitle">Retrait au club</h2>
+          <p data-i18n="info.pickupText"></p>
+          <a class="btn" data-wa-pickup target="_blank" rel="noopener" href="#" data-i18n="info.pickupCta">Organiser un retrait</a>
+        </div>
+        <div class="info-card">
+          <h2 class="shop-title shop-title--center" data-i18n="group.title">Une commande pour un groupe ?</h2>
+          <p data-i18n="group.text"></p>
+          <a class="btn" data-wa-link target="_blank" rel="noopener" href="#" data-i18n="group.cta">Écrire sur WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES + FAQ -->
+    <section class="section">
+      <div class="container">
+        <ul class="services" data-services></ul>
+        <div class="faq-wrap">
+          <h2 class="shop-title" data-i18n="faq.title">Questions fréquentes</h2>
+          <div class="faq" data-faq></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/app.js?v=20"></script>
+  <script src="js/shop.js?v=20"></script>
+  <script src="js/store.js?v=20"></script>
+</body>
+</html>

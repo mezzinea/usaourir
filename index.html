@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.homeTitle">US Aourir — Union Sport Aourir | Club de football</title>
+  <meta name="description" data-i18n-attr="content:meta.homeDesc" content="Site officiel de l’Union Sport Aourir : le club, les équipes jeunes, la galerie photos et la boutique officielle.">
+  <meta name="theme-color" content="#0D1B0C">
+  <meta property="og:title" content="US Aourir — Union Sport Aourir">
+  <meta property="og:description" content="Site officiel et boutique de l’Union Sport Aourir.">
+  <meta property="og:image" content="img/photos/u18-md.webp">
+  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700;800&family=Roboto:wght@400;500;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/photos/u18-lg.webp">
+  <link rel="stylesheet" href="css/style.css?v=20">
+  <script src="data/club.js?v=20"></script>
+  <script src="js/i18n.js?v=20"></script>
+</head>
+<body data-page="home" id="top">
+  <div data-site-header></div>
+
+  <main>
+    <!-- HERO SLIDER -->
+    <section class="slider" aria-roledescription="carousel" aria-label="US Aourir">
+      <div class="slider__track" data-slides></div>
+      <div class="slider__controls container">
+        <div class="slider__dots" data-dots></div>
+        <div class="slider__arrows">
+          <button type="button" class="slider__arrow" data-slide-prev data-i18n-attr="aria-label:hero.prev" aria-label="Précédent"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="slider__arrow" data-slide-next data-i18n-attr="aria-label:hero.next" aria-label="Suivant"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+      <a class="pill-cta" href="#galerie" data-i18n="hero.galleryCta">Voir la galerie</a>
+    </section>
+
+    <!-- CLUB -->
+    <section class="section" id="club">
+      <div class="container split">
+        <figure class="club-photo">
+          <img src="img/photos/staff-md.webp" alt="" loading="lazy" width="900" height="719" data-i18n-attr="alt:club.staff">
+          <figcaption data-i18n="club.staff">Le staff technique de l’US Aourir</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow" data-i18n="club.eyebrow">Le club</p>
+          <h2 data-i18n="club.title">Le club de toute une ville</h2>
+          <p data-i18n="club.p1"></p>
+          <p data-i18n="club.p2"></p>
+          <div class="stats" data-stats></div>
+          <ul class="values">
+            <li><span class="values__num">01</span><div><strong data-i18n="club.v1">Formation</strong><p data-i18n="club.v1t"></p></div></li>
+            <li><span class="values__num">02</span><div><strong data-i18n="club.v2">Solidarité</strong><p data-i18n="club.v2t"></p></div></li>
+            <li><span class="values__num">03</span><div><strong data-i18n="club.v3">Ambition</strong><p data-i18n="club.v3t"></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAMS -->
+    <section class="section section--tint" id="equipes">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2 class="title-line title-line--dark" data-i18n="teams.title2">De l’école de foot aux U18</h2>
+          <p class="lead" data-i18n="teams.text"></p>
+        </div>
+        <div class="teams" data-teams></div>
+        <div class="join">
+          <p data-i18n="teams.joinText"></p>
+          <a class="btn" data-join-link href="#" data-i18n="teams.join">Inscrire un joueur</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY: MORE THAN A CLUB -->
+    <section class="gallery-section" id="galerie">
+      <div class="gallery-section__watermark" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="title-line title-line--big" data-i18n="gallery.title">Plus qu’un club</h2>
+        <p class="gallery-section__text" data-i18n="gallery.text"></p>
+        <div class="photo-grid" data-photos></div>
+        <div class="gallery-section__more"><button type="button" class="btn btn--outline-light" data-photos-more data-i18n="gallery.more">Voir toutes les photos</button></div>
+      </div>
+    </section>
+
+    <!-- SHOP TEASER -->
+    <section class="section" id="boutique">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow" data-i18n="shop.eyebrow">Boutique officielle</p>
+            <h2 data-i18n="shop.title">Portez les couleurs, soutenez le club</h2>
+            <p class="lead" data-i18n="shop.text"></p>
+          </div>
+          <a class="link-arrow" href="boutique.html"><span data-i18n="shop.all">Voir toute la boutique</span></a>
+        </div>
+        <div class="grid" data-featured></div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="partner">
+      <div class="container partner__inner">
+        <div>
+          <h2 data-i18n="support.title">Devenez partenaire du club</h2>
+          <p data-i18n="support.text"></p>
+        </div>
+        <a class="btn btn--gold btn--lg" href="#contact" data-i18n="support.cta">Nous contacter</a>
+      </div>
+    </section>
+
+    <!-- SOCIAL / CONTACT -->
+    <section class="social" id="contact">
+      <div class="container social__inner">
+        <img src="img/logo-crest.png" alt="" class="social__crest" width="90" height="126" loading="lazy">
+        <h2 data-i18n="social.title">Suivez l’US Aourir</h2>
+        <p data-i18n="social.text"></p>
+        <div class="social__icons" data-social></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <dialog class="lightbox" data-lightbox aria-label="Photo"></dialog>
+
+  <script src="js/app.js?v=20"></script>
+  <script src="js/shop.js?v=20"></script>
+  <script src="js/home.js?v=20"></script>
+</body>
+</html>
