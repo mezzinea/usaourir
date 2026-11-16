@@ -72,7 +72,7 @@ window.USA_DATA = {
   // Homepage hero slider. image: a photo slug from img/photos/ (<slug>-lg.webp / -md.webp).
   // product: optional shop image shown as an inset on the slide.
   heroSlides: [
-    { image: "u18", tag: { fr: "Le club", ar: "النادي", en: "The club" },
+    { image: "senior", tag: { fr: "Le club", ar: "النادي", en: "The club" },
       title: { fr: "Vert et or, une seule passion.", ar: "الأخضر والذهبي، شغف واحد.", en: "Green and gold, one passion." },
       text: { fr: "L’Union Sport Aourir rassemble joueurs, familles et supporters autour du football et des valeurs de notre ville.", ar: "يجمع الاتحاد الرياضي أورير اللاعبين والعائلات والمشجعين حول كرة القدم وقيم مدينتنا.", en: "Union Sport Aourir brings players, families and supporters together around football and the values of our town." },
       cta: { label: { fr: "Découvrir le club", ar: "اكتشف النادي", en: "Discover the club" }, href: "#club" } },
@@ -97,7 +97,7 @@ window.USA_DATA = {
     { name: { fr: "U13", ar: "أقل من 13 سنة", en: "U13" }, image: "u13" },
     { name: { fr: "U14", ar: "أقل من 14 سنة", en: "U14" }, image: "u14" },
     { name: { fr: "Minimes", ar: "الصغار", en: "Minimes" }, image: "minime" },
-    { name: { fr: "U18", ar: "أقل من 18 سنة", en: "U18" }, image: "u18" }
+    { name: { fr: "Seniors", ar: "الكبار", en: "Seniors" }, image: "senior" }
   ],
 
   // Photo gallery ("Plus qu’un club"). Captions come from the photo names; edit freely.

@@ -4,7 +4,7 @@ A static website (HTML / CSS / JavaScript, no build step, no server code) with:
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Club homepage: green utility bar + two-row header over a full-width photo slider, the club (staff photo, stats, values), team photo cards (U11–U18, Minimes), "Plus qu’un club" photo gallery with full-screen viewer, featured products, partner call, social links |
+| `index.html` | Club homepage: green utility bar + two-row header over a full-width photo slider, the club (staff photo, stats, values), team photo cards (U11–U14, Minimes, Seniors), "Plus qu’un club" photo gallery with full-screen viewer, featured products, partner call, social links |
 | `boutique.html` | Official shop (big-club store style): scrolling promo ticker, green shop header, framed promo banner (white + green jerseys), one product row per category with page counter and "Voir tout", live jersey personaliser, photo band, category tiles, full catalogue with filter / search / sort, "Retrait au club" and group-order cards, services and FAQ. Product window with gallery, size guide and live name + number preview. |
 
 The cart is shared on both pages (cart icon in the header). There is **no online payment**: the customer fills in name / phone / pickup or delivery, and the order is sent to the club by **WhatsApp** (0669112013), with **e-mail** (`usaourir@gmail.com`) as a second option. The club then confirms by phone. Payment is made on delivery or on pickup at the club.

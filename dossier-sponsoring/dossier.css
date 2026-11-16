@@ -1,0 +1,362 @@
+/* Dossier de partenariat US Aourir — pages A4, couleurs du site (css/style.css). */
+:root {
+  --green: #0E773F;
+  --green-dk: #0A4A26;
+  --gold: #E1C257;
+  --gold-dk: #B8962E;
+  --night: #0D1B0C;
+  --ink: #1d2a1c;
+  --muted: #5d6b5c;
+  --cream: #F4F1E8;
+  --line: #ddd8c8;
+  --silver: #C9CDD3;
+  --bronze: #CD7F32;
+}
+
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; background: #d9dcd6; color: var(--ink); font: 400 10.5pt/1.5 Roboto, Arial, sans-serif; }
+h1, h2, h3, h4, .eyebrow, .kicker { font-family: "Roboto Condensed", Arial, sans-serif; }
+img { display: block; max-width: 100%; }
+p { margin: 0 0 2.6mm; }
+
+/* ---------- barre d'outils (écran) ---------- */
+.toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  padding: 10px 16px; background: var(--night); color: #fff; font-size: 14px; }
+.toolbar span { color: var(--gold); }
+.toolbar button { margin-left: auto; background: var(--gold); color: var(--night); border: 0; border-radius: 6px;
+  padding: 8px 14px; font: 700 14px "Roboto Condensed", sans-serif; cursor: pointer; }
+
+/* ---------- page ---------- */
+.page { position: relative; width: 210mm; height: 297mm; margin: 12mm auto; overflow: hidden; background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,.18); break-after: page; page-break-after: always; }
+.pc { padding: 10mm 16mm 0; }
+.ph { display: flex; align-items: center; gap: 3mm; height: 13mm; padding: 0 16mm; background: var(--night);
+  border-bottom: 1.2mm solid var(--gold); color: #fff; font: 700 7.5pt "Roboto Condensed", sans-serif;
+  letter-spacing: .06em; text-transform: uppercase; }
+.ph img { height: 9mm; }
+.pf { position: absolute; left: 0; right: 0; bottom: 0; height: 10mm; display: flex; justify-content: space-between;
+  align-items: center; padding: 0 16mm; background: var(--cream); border-top: .4mm solid var(--gold);
+  font-size: 7.5pt; color: var(--muted); }
+
+.eyebrow { margin: 0 0 1mm; color: var(--gold-dk); font-weight: 700; font-size: 8pt; letter-spacing: .1em; text-transform: uppercase; }
+h2 { margin: 0 0 6mm; font-size: 27pt; line-height: 1.05; font-weight: 800; color: var(--night); }
+h2::after { content: ""; display: block; width: 18mm; height: 1.2mm; margin-top: 2.5mm; background: var(--gold); }
+h3 { margin: 4mm 0 2mm; font-size: 13.5pt; color: var(--green-dk); font-weight: 700; }
+h4 { margin: 0 0 1.5mm; font-size: 11.5pt; font-weight: 700; }
+.intro { margin: -1mm 0 5mm; color: var(--muted); font-size: 10.5pt; }
+.small { font-size: 9pt; color: var(--muted); }
+.fine { margin-top: 3mm; font-size: 7.8pt; font-style: italic; color: var(--muted); }
+.gold { color: var(--gold); }
+.mt { margin-top: 6mm; }
+.h3-space { margin-top: 7mm; }
+
+/* champs à compléter : bien visibles tant qu'ils ne sont pas remplis */
+.todo { background: #FFF06A; color: #5a4a00; padding: 0 1.2mm; border-radius: 1mm; font-weight: 700;
+  font-style: normal; outline: .3mm dashed #c9a800; }
+
+/* ---------- photos ---------- */
+.photo { margin: 0; background: #fff; border: .3mm solid var(--line); }
+.photo img { width: 100%; height: 50mm; object-fit: cover; border-bottom: 1mm solid var(--gold); }
+.photo figcaption { padding: 2.2mm 3mm 2.8mm; font-size: 8.3pt; line-height: 1.4; color: var(--muted); }
+.photo figcaption b { display: block; margin-bottom: .6mm; font: 700 10.5pt "Roboto Condensed", sans-serif; color: var(--green-dk); }
+.photo.wide { margin-top: 5mm; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.grid-2-1 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 9mm; align-items: start; }
+.grid-intro { display: grid; grid-template-columns: 1.55fr 1fr; gap: 8mm; align-items: start; }
+
+/* ---------- couverture / dos ---------- */
+.cover { background: var(--night); color: #fff; }
+.cover__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.cover__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,27,12,.55) 0%, rgba(13,27,12,.62) 45%, rgba(13,27,12,.92) 100%); }
+.cover__top { position: absolute; top: 0; left: 0; right: 0; height: 6mm; background: var(--green); border-bottom: 1.2mm solid var(--gold); }
+.cover__body { position: relative; padding-top: 38mm; text-align: center; }
+.cover__crest { width: 52mm; margin: 0 auto 10mm; filter: drop-shadow(0 2mm 4mm rgba(0,0,0,.5)); }
+.kicker { margin: 0 0 4mm; color: var(--gold); font-weight: 700; letter-spacing: .35em; text-transform: uppercase; font-size: 10pt; }
+.cover h1 { margin: 0; font-size: 46pt; line-height: .98; font-weight: 800; text-transform: uppercase; text-shadow: 0 1mm 4mm rgba(0,0,0,.5); }
+.cover h1 span { color: var(--gold); }
+.rule { width: 34mm; height: 1.2mm; margin: 7mm auto; background: var(--gold); }
+.cover__club { margin: 0; font: 800 17pt "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: .04em; }
+.cover__sub { margin: 1.5mm 0 0; opacity: .9; }
+.cover__bottom { position: absolute; left: 0; right: 0; bottom: 0; padding: 7mm 0 8mm; text-align: center;
+  background: var(--night); border-top: 1.2mm solid var(--gold); }
+.cover__bottom p { margin: 0 0 1mm; }
+.back .cover__body { padding-top: 55mm; }
+.merci { font-size: 60pt !important; text-transform: none !important; }
+.back__sub { margin: 4mm 0 0; color: var(--gold); font: 700 17pt "Roboto Condensed", sans-serif; }
+.back__txt { font-size: 12pt; }
+.back__club { margin-top: 14mm; color: var(--gold); font: 700 12pt "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.back__contact { font-size: 10.5pt; opacity: .95; }
+
+/* ---------- mot du club ---------- */
+.prose p { text-align: justify; hyphens: auto; }
+.lead-green { color: var(--green-dk); font: 700 12.5pt "Roboto Condensed", sans-serif; }
+.sign { margin-top: 4mm; font-style: italic; color: var(--muted); text-align: left !important; }
+.toc { background: var(--night); color: #fff; border-radius: 2.5mm; border-bottom: 1.2mm solid var(--gold); padding: 6mm 7mm 5mm; }
+.toc h3 { margin: 0 0 3mm; color: var(--gold); font-size: 15pt; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { padding: 1.35mm 0; font-size: 9.5pt; border-bottom: .2mm solid rgba(255,255,255,.1); }
+.toc li:last-child { border-bottom: 0; }
+.toc b { display: inline-block; width: 8mm; color: var(--gold); }
+
+/* ---------- le club ---------- */
+.values { list-style: none; margin: 0; padding: 0; }
+.values li { position: relative; padding: 1.2mm 0 1.2mm 6mm; }
+.values li::before { content: ""; position: absolute; left: 0; top: 3.1mm; width: 2.4mm; height: 2.4mm; background: var(--gold); }
+.values b { color: var(--green-dk); }
+.crest-card { background: var(--night); border-radius: 2.5mm; border-bottom: 1.2mm solid var(--gold); padding: 9mm 8mm 6mm; text-align: center; }
+.crest-card img { width: 46mm; margin: 0 auto 5mm; }
+.crest-card p { margin: 0; color: var(--gold); font: 700 10pt "Roboto Condensed", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.band { margin-top: 7mm; padding: 6mm 16mm; background: var(--green-dk); color: #fff; text-align: center;
+  border-top: 1.2mm solid var(--gold); border-bottom: 1.2mm solid var(--gold); }
+.band p { margin: 0; color: rgba(255,255,255,.88); }
+.band__quote { margin-bottom: 1.5mm !important; color: #fff !important; font: 800 17pt "Roboto Condensed", sans-serif; }
+.pc--after-band { padding-top: 6mm; }
+
+/* ---------- chiffres ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.stat { background: var(--night); color: #fff; border-radius: 2mm; border-top: 1.2mm solid var(--gold); padding: 5mm 3mm 4.5mm; text-align: center; }
+.stat > b { display: block; color: var(--gold); font: 800 24pt/1.1 "Roboto Condensed", sans-serif; }
+.stat > b.todo, .stat > b .todo { font-size: 11pt; }
+.stat > span { display: block; margin-top: 1mm; font-size: 9pt; }
+.cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+.cats div { background: var(--cream); border-left: 1.2mm solid var(--green); border-radius: 0 1.5mm 1.5mm 0; padding: 2.5mm 3.5mm; }
+.cats b { display: block; color: var(--green-dk); font: 700 11pt "Roboto Condensed", sans-serif; }
+.cats span { font-size: 8.3pt; color: var(--muted); }
+
+/* ---------- équipes ---------- */
+.teams { gap: 5mm 5mm; }
+.teams .photo img { height: 54mm; }
+
+/* ---------- encadrement ---------- */
+.board { margin: 6mm 0 5mm; background: var(--night); color: #fff; border-left: 1.5mm solid var(--gold); border-radius: 2mm; padding: 4mm 6mm; }
+.board h3 { margin: 0 0 1.5mm; color: var(--gold); }
+.board p { margin: 0; font-size: 9.5pt; }
+
+/* ---------- vie du club ---------- */
+.dims { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 6mm; }
+.dims div { background: var(--night); color: #fff; border-radius: 2mm; border-top: 1.2mm solid var(--gold); padding: 4.5mm 4.5mm 3mm; }
+.dims div:nth-child(2) { border-top-color: var(--green); }
+.dims h4 { color: var(--gold); font-size: 12pt; }
+.dims p { font-size: 8.8pt; }
+
+/* ---------- pourquoi ---------- */
+.reasons { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.reasons div { position: relative; background: var(--cream); border-left: 1.5mm solid var(--gold); border-radius: 0 2mm 2mm 0; padding: 5mm 5.5mm 4mm 5.5mm; min-height: 42mm; }
+.reasons b { display: block; color: var(--gold-dk); font: 800 24pt/1 "Roboto Condensed", sans-serif; margin-bottom: 2mm; }
+.reasons h4 { color: var(--green-dk); font-size: 13pt; }
+.reasons p { font-size: 9.5pt; margin: 0; }
+.punch { margin-top: 8mm; background: var(--night); color: #fff; text-align: center; border-radius: 2mm; border-top: 1.5mm solid var(--gold); padding: 7mm; }
+.punch p { margin: 0 0 1.5mm; font: 800 15pt "Roboto Condensed", sans-serif; }
+.punch span { color: var(--gold); }
+
+/* ---------- niveaux ---------- */
+.dark { background: #0b0f0b; color: #fff; }
+.dark .pc { padding-top: 16mm; }
+.dark h2 { color: #fff; }
+.dark .intro { color: rgba(255,255,255,.78); }
+.dark .eyebrow { color: var(--gold); }
+.dark .pf { background: #141914; color: rgba(255,255,255,.6); border-top-color: var(--gold); }
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; align-items: stretch; margin-top: 4mm; }
+.tier { display: flex; flex-direction: column; background: #151a15; border: .5mm solid; border-top-width: 3mm; border-radius: 2.5mm; padding: 6mm 5mm 5mm; }
+.tier h3 { margin: 0; text-align: center; font-size: 26pt; font-weight: 800; text-transform: uppercase; }
+.tier__role { margin: 1mm 0 4mm; padding-bottom: 4mm; text-align: center; font: 700 10pt/1.3 "Roboto Condensed", sans-serif; border-bottom: .3mm solid rgba(255,255,255,.18); }
+.tier ul { list-style: none; margin: 0 0 4mm; padding: 0; flex: 1; }
+.tier li { position: relative; padding: 1.3mm 0 1.3mm 4.5mm; font-size: 9pt; line-height: 1.35; }
+.tier li::before { content: ""; position: absolute; left: 0; top: 2.6mm; width: 2mm; height: 2mm; background: currentColor; opacity: .9; }
+.tier li { color: #fff; }
+.tier__for { font-size: 8.3pt; color: rgba(255,255,255,.75); }
+.tier__for b { display: block; color: #fff; font-size: 9pt; }
+.tier__price { margin: 2mm 0 0; padding: 3mm 2mm; border-radius: 1.5mm; text-align: center; color: var(--night); font: 800 12pt "Roboto Condensed", sans-serif; }
+.tier__price small { display: block; font-size: 7pt; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 1mm; }
+.tier__price .todo { outline-color: rgba(0,0,0,.35); }
+.tier__seats { margin: 2.5mm 0 0; text-align: center; font-size: 8pt; color: rgba(255,255,255,.7); }
+.tier--gold { border-color: var(--gold); } .tier--gold h3, .tier--gold li::before { color: var(--gold); } .tier--gold li::before { background: var(--gold); } .tier--gold .tier__price { background: var(--gold); }
+.tier--silver { border-color: var(--silver); } .tier--silver h3 { color: var(--silver); } .tier--silver li::before { background: var(--silver); } .tier--silver .tier__price { background: var(--silver); }
+.tier--bronze { border-color: var(--bronze); } .tier--bronze h3 { color: #E3A066; } .tier--bronze li::before { background: var(--bronze); } .tier--bronze .tier__price { background: var(--bronze); }
+.note-gold { margin-top: 5mm; text-align: center; color: var(--gold); font-size: 9pt; font-weight: 700; }
+
+/* ---------- tableaux ---------- */
+table { width: 100%; border-collapse: collapse; }
+.cmp { border: .4mm solid var(--night); font-size: 8.6pt; }
+.cmp th, .cmp td { padding: 2.1mm 2.5mm; text-align: left; vertical-align: middle; border-bottom: .2mm solid var(--line); line-height: 1.3; }
+.cmp thead th { background: var(--night); color: #fff; font: 700 9pt "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: .05em; padding: 3mm 2.5mm; }
+.cmp thead th.g { background: var(--gold); color: var(--night); text-align: center; font-size: 11pt; }
+.cmp thead th.s { background: var(--silver); color: var(--night); text-align: center; font-size: 11pt; }
+.cmp thead th.b { background: var(--bronze); color: #fff; text-align: center; font-size: 11pt; }
+.cmp tbody th { width: 34%; color: var(--green-dk); font-weight: 700; }
+.cmp tbody tr:nth-child(even) { background: var(--cream); }
+.cmp tr.hl { background: #f3e9c4 !important; }
+
+.proj { border: .4mm solid var(--green); font-size: 8.8pt; }
+.proj thead th { background: var(--green); color: #fff; text-align: left; padding: 2.6mm 3mm; font: 700 8.5pt "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.proj th, .proj td { padding: 2.4mm 3mm; border-bottom: .2mm solid var(--line); text-align: left; vertical-align: middle; line-height: 1.35; }
+.proj tbody th { width: 32%; color: var(--green-dk); }
+.proj td:last-child { width: 22%; white-space: nowrap; }
+.proj tbody tr:nth-child(even) { background: var(--cream); }
+
+/* ---------- maillot ---------- */
+.kit { display: grid; grid-template-columns: 1.25fr 1fr; gap: 7mm; }
+.kit__art { background: radial-gradient(circle at 50% 35%, #24402c, #0d1b0c 75%); border-radius: 2mm; padding: 6mm 8mm; }
+.kit__art svg { width: 100%; height: auto; display: block; }
+.zone { margin-bottom: 3.5mm; }
+.zone b { display: block; padding: 1.8mm 3mm; border-radius: 1.5mm; font: 700 10.5pt "Roboto Condensed", sans-serif; color: var(--night); }
+.zone p { margin: 1.5mm 0 0; font-size: 9pt; }
+.zone--gold b { background: var(--gold); } .zone--silver b { background: var(--silver); } .zone--bronze b { background: var(--bronze); color: #fff; }
+.kit__side h3 { margin-top: 5mm; }
+ul.sq { list-style: none; margin: 0 0 3mm; padding: 0; }
+ul.sq li { position: relative; padding: 1mm 0 1mm 5mm; font-size: 9.3pt; }
+ul.sq li::before { content: ""; position: absolute; left: 0; top: 2.6mm; width: 2.2mm; height: 2.2mm; background: var(--gold); }
+.shopband { display: grid; grid-template-columns: 30mm 30mm 1fr; gap: 4mm; align-items: center; margin-top: 6mm; padding: 4mm; background: var(--night); color: #fff; border-radius: 2mm; border-top: 1.2mm solid var(--gold); }
+.shopband img { width: 30mm; height: 30mm; object-fit: cover; border-radius: 1.5mm; }
+.shopband h4 { color: var(--gold); }
+.shopband p { margin: 0; font-size: 8.8pt; }
+
+/* ---------- stade / digital ---------- */
+.pitch { position: relative; height: 68mm; border-radius: 2mm; overflow: hidden; border: .5mm solid var(--gold);
+  background: linear-gradient(180deg, #8fbfe6 0%, #bcd9ef 34%, #b89a6e 34%, #a7895f 42%, #0E773F 42%);
+}
+.pitch::after { content: ""; position: absolute; left: 0; right: 0; top: 42%; bottom: 0;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 18mm, transparent 18mm 36mm); }
+.pitch__boards { position: absolute; z-index: 1; left: 6mm; right: 6mm; top: 19mm; display: flex; gap: 3mm; align-items: center; }
+.bd { flex: 1; padding: 2.5mm 2mm; text-align: center; background: rgba(13,27,12,.88); border: .5mm dashed; border-radius: 1mm; }
+.bd b { display: block; font: 800 10.5pt "Roboto Condensed", sans-serif; }
+.bd small { font-size: 7pt; color: rgba(255,255,255,.8); }
+.bd--g { flex: 1.4; border-color: var(--gold); color: var(--gold); } .bd--s { border-color: var(--silver); color: var(--silver); } .bd--b { border-color: var(--bronze); color: #E3A066; }
+.pitch__boards img { width: 13mm; }
+.pitch__txt { position: absolute; z-index: 1; left: 6mm; right: 6mm; bottom: 5mm; color: #fff; font-size: 9pt; }
+.pitch__txt b { display: block; font: 800 13pt "Roboto Condensed", sans-serif; text-transform: uppercase; }
+.grid-digital { display: grid; grid-template-columns: 72mm 1fr; gap: 7mm; margin-top: 6mm; align-items: start; }
+.grid-digital h3:first-child { margin-top: 0; }
+.matchday { background: var(--night); border: .5mm solid var(--gold); border-radius: 2mm; overflow: hidden; color: #fff; text-align: center; }
+.matchday > img { width: 100%; height: 50mm; object-fit: cover; }
+.matchday__body { position: relative; padding: 4mm 4mm 5mm; }
+.matchday__crest { position: absolute; left: 50%; top: -9mm; width: 14mm; transform: translateX(-50%); }
+.matchday__t { margin: 3mm 0 0; color: var(--gold); font: 800 22pt/1 "Roboto Condensed", sans-serif; }
+.matchday__s { font-size: 8pt; }
+.matchday__p { margin: 2mm 0 2mm; font-size: 7pt; letter-spacing: .1em; text-transform: uppercase; }
+.matchday__logos { display: flex; gap: 2mm; justify-content: center; }
+.matchday__logos span { flex: 1; padding: 2.5mm 0; border: .4mm dashed; font: 700 7.5pt "Roboto Condensed", sans-serif; }
+.matchday__logos .g { color: var(--gold); flex: 1.3; } .matchday__logos .s { color: var(--silver); } .matchday__logos .b { color: #E3A066; }
+
+/* ---------- besoins ---------- */
+.needs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.needs div { display: flex; flex-direction: column; background: var(--cream); border-radius: 2mm; overflow: hidden; }
+.needs h4 { margin: 0; padding: 3mm 4mm; background: var(--night); color: var(--gold); border-bottom: 1mm solid var(--gold); font-size: 13pt; }
+.needs ul { flex: 1; margin: 3mm 0 0; padding: 0 4mm 0 8mm; font-size: 9pt; }
+.needs li { margin-bottom: 1.2mm; }
+.needs p { margin: 2mm 4mm 3.5mm; font-weight: 700; color: var(--green-dk); font-size: 9.5pt; }
+
+/* ---------- devenir partenaire ---------- */
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; list-style: none; margin: 0; padding: 0; }
+.steps li { background: var(--night); color: #fff; border-radius: 2mm; border-top: 1.2mm solid var(--gold); padding: 3.5mm 3mm; }
+.steps b { display: block; color: var(--gold); font: 800 20pt/1 "Roboto Condensed", sans-serif; margin-bottom: 1.5mm; }
+.steps h4 { font-size: 10.5pt; margin-bottom: 1mm; }
+.steps p { margin: 0; font-size: 8pt; line-height: 1.35; color: rgba(255,255,255,.85); }
+.form { border: .4mm solid var(--night); font-size: 9.3pt; }
+.form th, .form td { border-bottom: .2mm solid var(--line); padding: 3.2mm 3.5mm; text-align: left; }
+.form th { width: 38%; background: var(--cream); color: var(--green-dk); border-right: .2mm solid var(--line); }
+.form tr.tall th, .form tr.tall td { height: 20mm; }
+.form .checks span { margin-right: 6mm; }
+.contact { display: flex; justify-content: space-between; align-items: center; gap: 6mm; margin-top: 7mm; padding: 6mm 7mm; background: var(--night); color: #fff; border-radius: 2mm; border-bottom: 1.2mm solid var(--gold); }
+.contact h3 { margin: 0 0 3mm; color: var(--gold); font-size: 16pt; }
+.contact p { margin: 0 0 1.4mm; font-size: 9.6pt; }
+.contact .lbl { display: inline-block; width: 46mm; color: rgba(255,255,255,.65); }
+.contact img { width: 30mm; flex: none; }
+
+/* ---------- impression ---------- */
+@media print {
+  body { background: none; }
+  .toolbar { display: none; }
+  .page { margin: 0; box-shadow: none; }
+}
+@media screen and (max-width: 820px) {
+  .page { zoom: .45; }
+}
+
+/* ---------- ajustements après rendu ---------- */
+.cover:not(.back) .cover__bg { transform: scale(1.3); transform-origin: center 85%; }
+.teams .photo img { height: 61mm; }
+.reasons div { min-height: 50mm; }
+.reasons p { font-size: 10pt; }
+.dark .pc { padding-top: 18mm; }
+.tiers { margin-top: 6mm; }
+.tier li { font-size: 9.6pt; padding: 1.8mm 0 1.8mm 4.5mm; }
+.tier li::before { top: 3.1mm; }
+.custom { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; margin-top: 5mm; }
+.custom div { border: .3mm solid rgba(225,194,87,.5); border-radius: 2mm; padding: 4mm 5mm; background: #151a15; }
+.custom h4 { color: var(--gold); }
+.custom p { margin: 0; font-size: 9pt; color: rgba(255,255,255,.85); }
+.cmp { font-size: 9.2pt; }
+.cmp th, .cmp td { padding: 3.2mm 3mm; }
+.kit { grid-template-columns: 1.45fr 1fr; }
+.shopband { grid-template-columns: 36mm 36mm 1fr; }
+.shopband img { width: 36mm; height: 36mm; }
+.already { display: grid; grid-template-columns: 58mm 1fr; gap: 5mm; align-items: center; margin-top: 5mm; padding: 4mm; background: var(--cream); border-left: 1.5mm solid var(--gold); border-radius: 0 2mm 2mm 0; }
+.already img { width: 58mm; height: 34mm; object-fit: cover; border-radius: 1.5mm; }
+.already h4 { color: var(--green-dk); font-size: 12.5pt; }
+.already p { margin: 0; font-size: 9.3pt; }
+.pitch { height: 80mm; }
+.pitch__boards { top: 24mm; }
+.matchday > img { height: 66mm; }
+.matchday__crest { top: -11mm; width: 15mm; }
+.matchday__t { margin-top: 6mm; }
+.grid-digital > div:last-child p, .grid-digital ul.sq li { font-size: 10pt; }
+.needs ul { font-size: 9.6pt; }
+.form th, .form td { padding: 4.4mm 3.5mm; }
+.form tr.tall th, .form tr.tall td { height: 26mm; }
+.contact { padding: 8mm 8mm; }
+.contact p { font-size: 10.2pt; margin-bottom: 2mm; }
+.contact .lbl { width: 42mm; }
+.contact img { width: 36mm; }
+.tier li { padding: 1.4mm 0 1.4mm 4.5mm; }
+.tier li::before { top: 2.7mm; }
+.custom { margin-top: 4mm; }
+.needs ul { font-size: 9pt; }
+.needs ul { margin-top: 2.5mm; }
+.proj th, .proj td { padding: 2mm 3mm; }
+.pitch { height: 88mm; }
+.pitch__boards { top: 28mm; }
+.matchday > img { height: 80mm; }
+.dark .pc { padding-top: 14mm; }
+.contact p { display: grid; grid-template-columns: 44mm 1fr; align-items: baseline; }
+.contact .lbl { width: auto; font-size: 9pt; }
+
+/* ---------- liens de langue (barre d'outils) ---------- */
+.toolbar .langs { display: flex; gap: 4px; }
+.toolbar .langs a { padding: 4px 9px; border-radius: 5px; color: #fff; text-decoration: none; font: 700 13px "Roboto Condensed", sans-serif; border: 1px solid rgba(255,255,255,.25); }
+.toolbar .langs a[aria-current] { background: var(--gold); color: var(--night); border-color: var(--gold); }
+[dir="rtl"] .toolbar button { margin-left: 0; margin-right: auto; }
+
+/* ---------- version arabe : police, sens de lecture (RTL) ---------- */
+[lang="ar"] body { font-family: Cairo, Tahoma, sans-serif; font-size: 10pt; line-height: 1.6; }
+[lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] h4, [lang="ar"] .eyebrow, [lang="ar"] .kicker,
+[lang="ar"] .ph, [lang="ar"] .lead-green, [lang="ar"] .toc b, [lang="ar"] .cover__club, [lang="ar"] .band__quote,
+[lang="ar"] .photo figcaption b, [lang="ar"] .cats b, [lang="ar"] .punch p, [lang="ar"] .tier__role, [lang="ar"] .tier__price,
+[lang="ar"] .zone b, [lang="ar"] .bd b, [lang="ar"] .pitch__txt b, [lang="ar"] .matchday__t, [lang="ar"] .matchday__logos span,
+[lang="ar"] .back__sub, [lang="ar"] .back__club, [lang="ar"] .cmp thead th, [lang="ar"] .proj thead th, [lang="ar"] .toolbar button {
+  font-family: Cairo, Tahoma, sans-serif; letter-spacing: 0; }
+[lang="ar"] .stat > b, [lang="ar"] .reasons b, [lang="ar"] .steps b { font-family: "Roboto Condensed", Cairo, sans-serif; }
+[lang="ar"] h2 { font-size: 25pt; line-height: 1.25; }
+[lang="ar"] .cover h1 { font-size: 46pt; line-height: 1.2; }
+[lang="ar"] .kicker { letter-spacing: 0; font-size: 12pt; }
+[lang="ar"] .eyebrow { font-size: 9pt; }
+[lang="ar"] .ph { font-size: 8pt; }
+[lang="ar"] .tier h3 { font-size: 24pt; }
+[lang="ar"] .prose p { text-align: justify; }
+
+[dir="rtl"] .values li, [dir="rtl"] ul.sq li, [dir="rtl"] .tier li { padding-left: 0; padding-right: 6mm; }
+[dir="rtl"] ul.sq li, [dir="rtl"] .tier li { padding-right: 5mm; }
+[dir="rtl"] .values li::before, [dir="rtl"] ul.sq li::before, [dir="rtl"] .tier li::before { left: auto; right: 0; }
+[dir="rtl"] .cats div { border-left: 0; border-right: 1.2mm solid var(--green); border-radius: 1.5mm 0 0 1.5mm; }
+[dir="rtl"] .reasons div { border-left: 0; border-right: 1.5mm solid var(--gold); border-radius: 2mm 0 0 2mm; }
+[dir="rtl"] .board { border-left: 0; border-right: 1.5mm solid var(--gold); }
+[dir="rtl"] .already { border-left: 0; border-right: 1.5mm solid var(--gold); border-radius: 2mm 0 0 2mm; }
+[dir="rtl"] .cmp th, [dir="rtl"] .cmp td, [dir="rtl"] .proj th, [dir="rtl"] .proj td, [dir="rtl"] .form th, [dir="rtl"] .form td { text-align: right; }
+[dir="rtl"] .cmp thead th.g, [dir="rtl"] .cmp thead th.s, [dir="rtl"] .cmp thead th.b { text-align: center; }
+[dir="rtl"] .form th { border-right: 0; border-left: .2mm solid var(--line); }
+[dir="rtl"] .form .checks span { margin-right: 0; margin-left: 6mm; }
+[dir="rtl"] .needs ul { padding: 0 8mm 0 4mm; }
+[dir="rtl"] .matchday__crest { left: 50%; right: auto; }
